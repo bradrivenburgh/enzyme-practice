@@ -1,6 +1,6 @@
 import React from 'react';
 import toJson from 'enzyme-to-json';
-import { shallow, mount, render, simulate } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import Login from '../Login';
 
