@@ -1,9 +1,16 @@
 import React from 'react';
+import toJson from 'enzyme-to-json';
 import { shallow, mount, render, simulate } from 'enzyme';
 
 import Login from '../Login';
 
 describe('Login Test Suite', () => {
+  it('renders correctly', () => {
+    const tree = shallow(<Login />);
+    const snapshot = toJson(tree);
+    expect(snapshot).toMatchSnapshot();
+  });
+
   it('should render the form', () => {
     const wrapper = shallow(<Login />);
     // renders form element
@@ -35,4 +42,5 @@ describe('Password Test Suite', () => {
     target: { name: 'password', value: 'my_log_is_rocket' },
   });
   expect(wrapper.state('password')).toEqual('my_log_is_rocket');
+  wrapper.unmount();
 });

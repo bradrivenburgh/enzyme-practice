@@ -18,14 +18,14 @@ export default class Login extends React.Component {
   render() {
     return (
       <form className='login'>
-        <label>Username</label>
+        <label htmlFor='email'>Username</label>
         <input
           id='email'
           onBlur={this.handleInputChange}
           name='email'
           type='text'
         />
-        <label>Password</label>
+        <label htmlFor='password'>Password</label>
         <input
           id='password'
           onBlur={this.handleInputChange}
